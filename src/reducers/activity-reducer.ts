@@ -55,6 +55,7 @@ export const activityReducer = (
     }
 
     if(action.type === 'restart-app') {
+        localStorage.removeItem('activities')
         return {
             activities: [],
             activeId: ''
